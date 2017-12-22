@@ -5,6 +5,10 @@
   },
   "apps": [
     {
+      "appShell": {
+        "app": "flicky-unv",
+        "route": "shell"
+      },
       "root": "src",
       "outDir": "dist",
       "assets": [
@@ -19,26 +23,24 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.scss  "
+        "styles.scss"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
         "prod": "environments/environment.prod.ts"
-      },
-      "appShell": {
-        "app": "flicky-unv",
-        "route": "shell"
       }
     },
     {
+      "name": "flicky-unv",
       "root": "src",
       "outDir": "dist-server/",
       "assets": [
         "assets",
         "favicon.ico"
       ],
+      "platform": "server",
       "index": "index.html",
       "main": "main.server.ts",
       "polyfills": "polyfills.ts",
@@ -54,9 +56,7 @@
       "environments": {
         "dev": "environments/environment.ts",
         "prod": "environments/environment.prod.ts"
-      },
-      "platform": "server",
-      "name": "flicky-unv"
+      }
     }
   ],
   "e2e": {
@@ -84,7 +84,8 @@
     }
   },
   "defaults": {
-    "styleExt": "css",
-    "component": {}
+    "styleExt": "scss",
+    "component": {
+    }
   }
 }
