@@ -8,12 +8,14 @@ import { RouterModule } from '@angular/router';
 import { FeedComponent } from './feed/feed.component';
 import { FlickrService  } from './flickr.service';
 import {  HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
+import { PostdetailComponent } from './feed/postdetail/postdetail.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    FeedComponent
+    FeedComponent,
+    PostdetailComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

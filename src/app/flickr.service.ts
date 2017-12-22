@@ -4,11 +4,14 @@ import { catchError } from 'rxjs/operators';
 
 @Injectable()
 export class FlickrService {
-  constructor(private httpClient: HttpClient) {}
+  constructor(private httpClient: HttpClient) {
+
+  }
   getFlickrFeed() {
     return this.httpClient.jsonp(
       'https://api.flickr.com/services/feeds/photos_public.gne?tags=potato&tagmode=all&format=json',
       'jsoncallback'
     );
   }
+
 }

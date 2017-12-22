@@ -1,5 +1,7 @@
 section {
   display: flex;
+  scroll-behavior: smooth;
+
   @media (max-width: 800px) {
     flex-wrap: wrap;
   }
