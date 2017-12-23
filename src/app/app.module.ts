@@ -9,13 +9,15 @@ import { FeedComponent } from './feed/feed.component';
 import { FlickrService  } from './flickr.service';
 import {  HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
 import { PostdetailComponent } from './feed/postdetail/postdetail.component';
+import { PostComponent } from './feed/post/post.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     FeedComponent,
-    PostdetailComponent
+    PostdetailComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

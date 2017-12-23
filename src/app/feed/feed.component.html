@@ -3,12 +3,7 @@
     <p>No Data Available...</p>
   </div>
 
-  <article *ngFor="let post of feed; let idx = index">
-    <h2>
-      <a routerLink="/postdetail/{{idx}}">
-        {{post.title}}
-      </a>
-    </h2>
 
-  </article>
+  <app-post class="post" [post]="post" [idx]="idx" *ngFor="let post of feed; let idx = index"></app-post>
+
 </section>
