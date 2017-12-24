@@ -1,5 +1,22 @@
-  postdetail works!
+<div class="wrapper">
+  <div class=" header">
+    <div class="title">
+      <a href="">{{post.title}}</a>
+    </div>
+    <div class="nav">
+        <button (click)="goBack()">< Go Back</button>
+    </div>
+  </div>
+  <div class="box subheader">
+    {{post.author}} | {{ post.published  | date}}
+  </div>
+  <div class="box sidebar"  >
+    <img *ngIf="post.media" src="{{post.media['m']}}" alt="">
+  </div>
+  <div class="box content">Content
     <div [innerHTML]="post.description || ''">
     </div>
-      <button (click)="goBack()">go back</button>
-
+  </div>
+  <div class="box footer">
+    {{post.tags}}
+  </div>

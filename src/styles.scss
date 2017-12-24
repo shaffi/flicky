@@ -2,6 +2,7 @@
 @import './_variables';
 body { /* ...or body.dialogShowing */
   scroll-behavior: contain;
+  background-color: #eee;
 }
 .site-header {
   position: fixed;
@@ -20,3 +21,7 @@ body { /* ...or body.dialogShowing */
   font-weight: 400;
   box-shadow: 0 2px 2px rgba(10,16,20,.24), 0 0 2px rgba(10,16,20,.12);
 }
+
+
+
+

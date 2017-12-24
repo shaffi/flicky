@@ -9,7 +9,7 @@ export class FlickrService {
   }
   getFlickrFeed() {
     return this.httpClient.jsonp(
-      'https://api.flickr.com/services/feeds/photos_public.gne?tags=potato&tagmode=all&format=json',
+      'https://api.flickr.com/services/feeds/photos_public.gne?tags=christmas&tagmode=all&format=json',
       'jsoncallback'
     );
   }

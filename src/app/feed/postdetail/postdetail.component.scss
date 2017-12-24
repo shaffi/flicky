@@ -1,0 +1,108 @@
+.sidebar {
+  grid-area: sidebar;
+  align-self: auto;
+  padding: 1em;
+  background: linear-gradient(145deg, #fee, #fff);
+  border-right: #fee 1px solid;
+  border-bottom: #fee 1px solid;
+  border-radius: 2px;
+  img {
+    display: block;
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+  }
+  @media (max-width: 800px) {
+    display: none;
+  }
+}
+.title {
+  grid-area: title;
+  justify-self: start;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  align-self: flex-end;
+  width: 100%;
+   font-size: 16px;
+  a {
+    color: hotpink;
+  }
+}
+.nav {
+  grid-area: nav;
+  justify-self: end;
+  button {
+    background-color: #ad2b65;
+    color: #f0e8df;
+    padding: 1em;
+    transition:0.3s ease all;
+    &:hover {
+      background-color:#f0e8df;
+      color: #ad2b65;
+
+    }
+    &:focus {
+      background-color:#f0e8df;
+      color: #ad2b65;
+
+    }
+  }
+}
+.content {
+  grid-area: content;
+}
+
+.header {
+  grid-area: header;
+  display: grid;
+  padding: 1em;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "title  title  nav";
+}
+
+.footer {
+  grid-area: footer;
+  border: #fee 1px solid;
+
+
+}
+
+.wrapper {
+  display: grid;
+  height: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "header  header  header"
+    "subheader  subheader  subheader"
+    "sidebar content content"
+    "footer  footer  footer";
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 1em;
+  background: linear-gradient(145deg, #fee, #fff);
+
+  box-shadow: 0 2px 2px rgba(10, 16, 20, 0.24), 0 0 2px rgba(10, 16, 20, 0.12);
+  box-sizing: border-box;
+
+  color: #444;
+  @media (max-width: 800px) {
+    align-self: center;
+    justify-self: center;
+    grid-template-areas:
+      "header  header  header"
+      "subheader  subheader  subheader"
+      "content content content"
+      "footer  footer  footer";
+  }
+}
+
+.box {
+  padding: 1em;
+}
+
+.subheader {
+  grid-area: subheader;
+  padding: 1em;
+
+}

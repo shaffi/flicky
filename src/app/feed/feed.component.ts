@@ -8,7 +8,7 @@ import { Post } from "../model/post";
   styleUrls: ["./feed.component.scss"]
 })
 export class FeedComponent implements OnInit {
-  feed = <Post>[];
+  feed = new Array();
   constructor(private flickrService: FlickrService) {}
 
   ngOnInit() {

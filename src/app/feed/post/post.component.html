@@ -1,15 +1,14 @@
 <div class="wrapper">
-  <div class="box a">
-    <!-- <a routerLink="/postdetail/{{idx}}">
-            {{post.title}}
-          </a> -->
-    A
+  <div class="box thumbmail">
+    <img *ngIf="post.media"  src="{{post.media['m']}}" alt="">
   </div>
-  <div class="box b">
-    B
+  <div class="title">
+    <a routerLink="/postdetail/{{idx}}">
+      {{post.title}}
+    </a>
   </div>
-  <div class="box c">C</div>
-  <div class="box d">D</div>
-  <div class="box e">E</div>
+  <div class="box author"><a href="">{{post.author}}</a></div>
+  <div class="box publishinfo">Published on {{post.published | date}}</div>
+  <div class="box e"><a href="">View more</a>  </div>
 
 </div>
