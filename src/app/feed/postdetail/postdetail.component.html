@@ -9,7 +9,7 @@
     </div>
   </div>
   <div class="box subheader">
-   <a href="https://www.flickr.com/photos/{{post.author_id}}"> {{post.author}} </a> | Published {{ post.published | date}}
+   <a href="https://www.flickr.com/people/{{post.author_id}}"> {{post.author}} </a> | Published {{ post.published | date}}
   </div>
   <div class="box sidebar">
     <img *ngIf="post.media" src="{{post.media['m']}}" alt="">
