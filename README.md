@@ -4,9 +4,9 @@ This code consumes a Flickr`s public JSON API Feed and display the resulting dat
 
 ## Technologies used
 
-Angular
-Typescript
-HTNL, CSS with SASS
+* Angular
+* Typescript
+* HTNL, CSS with SASS
 
 ## Responsive Design and layout
 
