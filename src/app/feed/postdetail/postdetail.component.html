@@ -1,16 +1,17 @@
 <div class="wrapper">
   <div class=" header">
     <div class="title">
-      <a href="">{{post.title}}</a>
+      <a href="{{post.link}}">{{post.title}}</a>
     </div>
     <div class="nav">
-        <button (click)="goBack()">< Go Back</button>
+      <button (click)="goBack()">
+        < Go Back</button>
     </div>
   </div>
   <div class="box subheader">
-    {{post.author}} | {{ post.published  | date}}
+   <a href="https://www.flickr.com/photos/{{post.author_id}}"> {{post.author}} </a> | Published {{ post.published | date}}
   </div>
-  <div class="box sidebar"  >
+  <div class="box sidebar">
     <img *ngIf="post.media" src="{{post.media['m']}}" alt="">
   </div>
   <div class="box content">Content
@@ -18,5 +19,7 @@
     </div>
   </div>
   <div class="box footer">
-    {{post.tags}}
+    <span *ngFor="let tag of tags">
+      <a href="#">{{tag}}</a>
+    </span>
   </div>

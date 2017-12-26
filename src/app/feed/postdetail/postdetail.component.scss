@@ -1,10 +1,9 @@
 .sidebar {
   grid-area: sidebar;
-  align-self: auto;
+  align-self: start;
   padding: 1em;
   background: linear-gradient(145deg, #fee, #fff);
-  border-right: #fee 1px solid;
-  border-bottom: #fee 1px solid;
+  border: #fee 1px inset;
   border-radius: 2px;
   img {
     display: block;
@@ -18,15 +17,16 @@
 }
 .title {
   grid-area: title;
-  justify-self: start;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   align-self: flex-end;
   width: 100%;
-   font-size: 16px;
+  font-size: 18px;
+  font-weight: bold;
   a {
-    color: hotpink;
+    color: #ad2b65;
+    text-decoration: none;
   }
 }
 .nav {
@@ -36,16 +36,14 @@
     background-color: #ad2b65;
     color: #f0e8df;
     padding: 1em;
-    transition:0.3s ease all;
+    transition: 0.3s ease all;
     &:hover {
-      background-color:#f0e8df;
+      background-color: #f0e8df;
       color: #ad2b65;
-
     }
     &:focus {
-      background-color:#f0e8df;
+      background-color: #f0e8df;
       color: #ad2b65;
-
     }
   }
 }
@@ -59,18 +57,20 @@
   padding: 1em;
   grid-template-columns: repeat(3, 1fr);
   grid-template-areas: "title  title  nav";
+  border-bottom: #ad2b65 3px double;
 }
 
 .footer {
   grid-area: footer;
   border: #fee 1px solid;
-
-
+  border-top: #ad2b65 1px solid;
 }
 
 .wrapper {
   display: grid;
   height: 100%;
+  margin-top: 10px;
+
   grid-template-columns: repeat(3, 1fr);
   grid-template-areas:
     "header  header  header"
@@ -104,5 +104,4 @@
 .subheader {
   grid-area: subheader;
   padding: 1em;
-
 }

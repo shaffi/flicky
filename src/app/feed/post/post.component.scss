@@ -39,8 +39,10 @@
   grid-column: 2 / span 3;
   align-self: flex-end;
   padding: 1em;
+
   a {
     color: hotpink;
+    text-decoration: none;
   }
   @media (max-width: 800px) {
     grid-column: 2 / span 2;

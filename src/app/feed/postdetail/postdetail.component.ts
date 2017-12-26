@@ -10,6 +10,7 @@ import { FlickrService } from "../../flickr.service";
 })
 export class PostdetailComponent implements OnInit {
   post: Post = {};
+  tags = [];
   constructor(
     private location: Location,
     private route: ActivatedRoute,
@@ -26,6 +27,7 @@ export class PostdetailComponent implements OnInit {
       const index = this.route.snapshot.paramMap.get("idx");
       console.log(index);
       this.post = feed[index];
+      this.tags = this.post.tags.split(' ').map(t => t);
     });
   }
   goBack(): void {
