@@ -6,9 +6,7 @@ import { PostdetailComponent } from "./feed/postdetail/postdetail.component";
 const routes: Routes = [
   { path: 'feed', component: FeedComponent },
   { path: '', pathMatch: 'full', redirectTo: 'feed' },
-  { path: 'postdetail/:idx', component: PostdetailComponent },
-
-
+  { path: 'postdetail/:idx', component: PostdetailComponent }
 ];
 
 @NgModule({

@@ -1,7 +1,7 @@
 <div class="wrapper">
   <div class=" header">
     <div class="title">
-      <a href="{{post.link}}">{{post.title}}</a>
+      <a href="{{post.link}}" target="blank">{{post.title}}</a>
     </div>
     <div class="nav">
       <button (click)="goBack()">
@@ -9,7 +9,7 @@
     </div>
   </div>
   <div class="box subheader">
-   <a href="https://www.flickr.com/people/{{post.author_id}}"> {{post.author}} </a> | Published {{ post.published | date}}
+   <a href="https://www.flickr.com/people/{{post.author_id}}" target="blank"> {{post.author}} </a> | Published {{ post.published | date}}
   </div>
   <div class="box sidebar">
     <img *ngIf="post.media" src="{{post.media['m']}}" alt="">

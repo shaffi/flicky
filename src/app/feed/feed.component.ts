@@ -31,12 +31,8 @@ export class FeedComponent implements OnInit, AfterViewInit, OnDestroy {
   searchSubscription: Subscription;
   @ViewChild('searchinput') searchInput: ElementRef;
 
-  constructor(private flickrService: FlickrService) {
-    this.flickrService.searchQuery = 'potato';
-  }
-  search(query: string) {
-    console.log(query);
-  }
+  constructor(public flickrService: FlickrService) {}
+
   ngOnInit() {
     this.flickrService.getFlickrFeed().subscribe(data => {
       this.feed = data && data['items'].length ? data['items'] : [];
@@ -44,16 +40,14 @@ export class FeedComponent implements OnInit, AfterViewInit, OnDestroy {
   }
   ngAfterViewInit() {
     this.searchSubscription = Observable.fromEvent(
-      this.searchInput.nativeElement,
-      'keyup'
-    )
+      this.searchInput.nativeElement,'keyup')
       .map((e: any) => e.target.value)
       .debounceTime(400)
       .concat()
       .distinctUntilChanged()
       .filter((query: string) => query.length > 0)
       .switchMap((query: string) => {
-        this.flickrService.searchQuery = query || 'potato';
+        this.flickrService.searchQuery = query;
         return this.flickrService.getFlickrFeed();
       })
       .subscribe(results => {
