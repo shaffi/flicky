@@ -2,6 +2,10 @@
 
 This code consumes a Flickr`s public JSON API Feed and display the resulting data.
 
+## Demo
+http://shaffiullah.in/flicky/
+
+
 ## Technologies used
 
 * Angular
