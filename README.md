@@ -1,6 +1,6 @@
 # Flicky
 
-This code consumes a Flickr`s public JSON API Feed and display the resulting data.
+This code consumes a Flickr`s public JSON API Feed and display the resulting data.  
 
 ## Demo
 http://shaffiullah.in/flicky/
@@ -8,13 +8,11 @@ http://shaffiullah.in/flicky/
 
 ## Technologies used
 
-* Angular
+* Angular  
 * Typescript
 * HTNL, CSS with SASS
-
-## Responsive Design and layout
-
-MAde use of CSS Grid which is more effecient for CSS layouts
+* RxJS Operators for auto search
+* Responsive Design and layout is done with use of CSS Grid which is more effecient for CSS layouts
 Used media Queries for the responsive layout
 
 ## Installation
