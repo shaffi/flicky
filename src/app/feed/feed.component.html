@@ -1,7 +1,10 @@
-<input type="text" #searchinput />
+<section class="search">
+  <input type="text" #searchinput placeholder="Search by tags for recent photos" />
+</section>
 <div *ngIf="!(feed&&feed.length)">
   <p>No Data Available...</p>
 </div>
-<section>
+
+<section class="main">
   <app-post class="post" [post]="post" [idx]="idx" *ngFor="let post of feed; let idx = index"></app-post>
 </section>
