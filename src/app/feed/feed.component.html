@@ -1,9 +1,7 @@
+<input type="text" #searchinput />
+<div *ngIf="!(feed&&feed.length)">
+  <p>No Data Available...</p>
+</div>
 <section>
-  <div *ngIf="!(feed&&feed.length)">
-    <p>No Data Available...</p>
-  </div>
-
-
   <app-post class="post" [post]="post" [idx]="idx" *ngFor="let post of feed; let idx = index"></app-post>
-
 </section>
